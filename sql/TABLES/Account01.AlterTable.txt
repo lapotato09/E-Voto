@@ -1,0 +1,6 @@
+ALTER TABLE `ev000`.`account01` 
+ADD COLUMN `person00id` INT NULL AFTER `active`,
+ADD COLUMN `idno` VARCHAR(45) NULL AFTER `person00id`,
+ADD COLUMN `usertype` VARCHAR(45) NULL AFTER `idno`;
+CHANGE COLUMN `usertype` `usertype` VARCHAR(45) NULL DEFAULT NULL ;
+

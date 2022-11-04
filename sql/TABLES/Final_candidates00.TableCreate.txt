@@ -1,0 +1,9 @@
+CREATE TABLE `ev000`.`final_candidates00` (
+  `final_candidates00id` INT NOT NULL AUTO_INCREMENT,
+  `idno` VARCHAR(45) NULL,
+  `lastname` VARCHAR(45) NULL,
+  `fistname` VARCHAR(45) NULL,
+  `middlename` VARCHAR(45) NULL,
+  `position` VARCHAR(45) NULL,
+  `datecreated` VARCHAR(45) NULL
+  PRIMARY KEY (`final_candidates00id`));

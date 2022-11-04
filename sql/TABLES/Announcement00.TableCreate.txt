@@ -1,0 +1,10 @@
+CREATE TABLE `announcement00` (
+  `ann00id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(45) DEFAULT NULL,
+  `subject` varchar(45) DEFAULT NULL,
+  `content` varchar(1000) DEFAULT NULL,
+  `active` int(11) DEFAULT NULL,
+  `dateposted` varchar(45) DEFAULT NULL,
+  `dateunposted` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`ann00id`)
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;

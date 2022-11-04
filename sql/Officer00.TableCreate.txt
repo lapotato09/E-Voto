@@ -1,0 +1,11 @@
+CREATE TABLE `ev000`.`officer00` (
+  `officer00id` INT NOT NULL AUTO_INCREMENT,
+  `orgid` VARCHAR(10) NULL,
+  `positionid` VARCHAR(10) NULL,
+  `level` VARCHAR(45) NULL,
+  `status` VARCHAR(45) NULL,
+  `year` VARCHAR(10) NULL,
+  `active` BIT NULL,
+  `createdby` VARCHAR(45) NULL,
+  `datecreated` VARCHAR(45) NULL,
+  PRIMARY KEY (`officer00id`));

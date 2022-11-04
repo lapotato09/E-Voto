@@ -1,0 +1,82 @@
+.greet {
+  /*background: #1f2833;*/
+  /*font-family: 'Signika Negative', sans-serif;*/
+  font-family: 'Arial';
+  color: #54626f;
+  margin-bottom: 10px;
+  padding-top: 30px;
+}
+
+.greet .sidebar-nav {
+  background: white;
+  border-radius: 5px;
+  /*box-shadow: 2px 2px 10px gray;*/
+  /*box-shadow: 0 3px 10px rgb(242, 243, 244);*/
+  padding: 5px;
+}
+
+.greet .sidebar-nav button {
+  height: 50px;
+  margin: 0px;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.greet .sidebar-nav button:hover {
+  background: #920003;
+  color: white;
+  font-weight: bold;
+  transition-duration: .2s;
+}
+
+.greet .sidebar-nav button:hover > .fa{
+  color: white;
+  transition-duration: .2s;
+}
+
+.greet .sidebar-nav button:focus {
+  box-shadow: none;
+}
+
+.greet .sidebar-nav .submenu button {
+  color: #59515e;
+  font-size: 15px;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.greet .sidebar-nav .submenu button:hover {
+  background: #920003;
+  color: white;
+  font-weight: bold;
+  transition-duration: .2s;
+}
+
+.greet .filing-head {
+  /*background: #f9cf00;*/
+  /*background: #4484ce;*/
+
+  background: #0b0c10;
+  /*background: #ffa502;*/
+  /*ffa502*/
+  color: white;
+}
+
+.greet .in-cards {
+  margin-bottom: 20px; 
+}
+
+.greet .sidebar-nav button .fa {
+  /*color: #bebdb8;*/
+  color: #848482;
+}
+
+.note-active {
+  border-left: 5px solid #920003;
+  /*transition-duration: .2s;*/
+}
+

@@ -1,0 +1,10 @@
+CREATE TABLE `ev000`.`role00` (
+  `role00id` INT NOT NULL AUTO_INCREMENT,
+  `rolecode` VARCHAR(45) NULL,
+  `roledescription` VARCHAR(45) NULL,
+  `rolename` VARCHAR(45) NULL,
+  `rolegroup` VARCHAR(45) NULL,
+  `active` BIT NULL DEFAULT 1,
+  `createdby` INT NULL,
+  `datecreated` VARCHAR(45) NULL,
+  PRIMARY KEY (`role00id`));

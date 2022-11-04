@@ -1,0 +1,5 @@
+PHP notes:
+
+--mysqli_query(connection, query)	 # EXECUTE QUERY
+--mysqli_fetch_array() # fetch return data into array so that you can loop the result 
+--mysqli_num_rows # count row in return array after select data

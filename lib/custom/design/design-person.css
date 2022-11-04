@@ -1,0 +1,87 @@
+.search-div {
+	/*
+		WHITE COLORS:
+		white,
+		#ffffff 
+		#f1f2f6
+		#dfe4ea
+		#ced6e0
+		#ecf0f1
+	*/
+	/*background: #f1f2f6;
+	padding-top: 20px;
+	padding-bottom: 10px; */
+	margin-top: 10px;
+	background: #f1f2f6;
+	padding-top: 5px;
+	border-radius: 5px;
+
+}
+#datadiv {
+	margin-top: 10px;
+	border-style: solid;
+	border-radius: 5px;
+	border-width: 1px;
+	border-color: #d1ccc0;
+  /*box-shadow: 2px 2px 2px  #d1ccc0;*/
+}
+
+#FormPerson {
+	margin-top: 20px;
+}
+
+#datadiv #rightdiv {
+	background: white;
+	border-radius: 5px;
+	margin-top: 10px;
+	padding-bottom: 10px;
+	/*background: #c7ecee;*/
+}
+#datadiv #leftdiv {
+	/*background: #dff9fb;*/
+	background: #d1ccc0;
+}
+#datadiv #leftdiv .img-div {
+	margin-top: 10px;
+	height: 250px;
+	width: 250px;
+	position: relative;
+}
+#datadiv #leftdiv .per-details-first {
+	text-align: center;
+	font-weight: bold;
+	font-size: 35px;
+	margin-bottom: -25px;
+}
+#datadiv #leftdiv .per-details-last {
+	text-align: center;
+	font-weight: bold;
+	font-size: 35px;
+	margin-bottom: -15px;
+}
+#datadiv #leftdiv .per-details-lrn {
+	text-align: center;
+	font-weight: bold;
+	font-size: 20px;
+}
+#datadiv #rightdiv #lblValue {
+	font-weight: bold;
+}
+#datadiv #rightdiv .form-control {
+	border: 0;
+	box-shadow: none;
+	margin-left: 0;
+	padding-left: 0;
+}
+.req {
+	font-weight: bold;
+	color: red;
+}
+.invalid-data {
+	color: red;
+	font-size: 15px;
+}
+
+.margin-bottom-0 {
+	margin-bottom: 0;
+}

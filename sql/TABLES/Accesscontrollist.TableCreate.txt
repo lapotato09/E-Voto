@@ -1,0 +1,7 @@
+CREATE TABLE `ev000`.`access_control_list` (
+  `access_control_list00id` INT NOT NULL AUTO_INCREMENT,
+  `code` VARCHAR(45) NULL,
+  `role00id` VARCHAR(45) NULL,
+  `rolecode` VARCHAR(45) NULL,
+  `datecreated` VARCHAR(45) NULL,
+  PRIMARY KEY (`access_control_list00id`));

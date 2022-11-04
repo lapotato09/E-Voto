@@ -1,0 +1,17 @@
+
+nav {
+  background: #0b0c10;
+  margin-bottom: 50px;
+  color: white;
+  /*font-family: "Arial";*/
+  font-family: "Oswald" , sans-serif;
+  /*font-family: 'Merienda', cursive;*/
+  /*font-family: 'Ruda', sans-serif;*/
+}
+
+.main {
+  margin-top: 7%;
+  background: white;
+  padding: 10px 50px 50px 50px;
+  border-radius: 5px;
+}

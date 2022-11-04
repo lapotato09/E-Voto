@@ -1,0 +1,10 @@
+CREATE TABLE `masterlist00` (
+  `masterlist00id` int(11) NOT NULL AUTO_INCREMENT,
+  `person00id` int(11) NOT NULL,
+  `datestarteffectivity` varchar(45) DEFAULT NULL,
+  `dateendeffectivity` varchar(45) DEFAULT NULL,
+  `active` bit(1) DEFAULT NULL,
+  `datecreated` varchar(45) DEFAULT NULL,
+  `schoolidno` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`masterlist00id`)
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;

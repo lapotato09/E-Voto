@@ -1,0 +1,25 @@
+USE `ev000`;
+DROP procedure IF EXISTS `ev_PositionDetailsSave`;
+
+DELIMITER $$
+USE `ev000`$$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `ev_PositionDetailsSave`(
+    IN org00id INT,
+    IN orgfieldcode VARCHAR(100),
+    IN orgfieldvalue VARCHAR(100),
+    IN orglevel VARCHAR(5),
+    IN orglimit VARCHAR(5)    
+)
+BEGIN
+    DECLARE org01id INT;    
+        IF EXISTS(SELECT organization01id FROM organization01 WHERE fieldcode = orgfieldcode AND organization00id = org00id) THEN
+            SET org01id = (SELECT organization01id FROM organization01 WHERE fieldcode = orgfieldcode AND organization00id = org00id);
+            UPDATE organization01 SET fieldvalue = orgfieldvalue, `limit` = orglimit, `level` = orglevel WHERE fieldcode = orgfieldcode AND organization00id = org00id;
+        ELSE
+            INSERT organization01(organization00id, fieldcode, fieldtype, fieldvalue, `level`, datecreated, `limit`)
+            VALUES (org00id, orgfieldcode, 'VARCHAR', orgfieldvalue, orglevel, NOW(), orglimit);
+        END IF;
+END$$
+
+DELIMITER ;
+

@@ -1,0 +1,32 @@
+USE `ev000`;
+DROP procedure IF EXISTS `ev_AccessControlInsert`;
+
+DELIMITER $$
+USE `ev000`$$
+CREATE PROCEDURE `ev_AccessControlInsert` (
+	IN accesscode VARCHAR(100),
+	IN accessname VARCHAR(100),
+	IN accesstype VARCHAR(45),
+	IN accessgroup VARCHAR(100),
+	IN accessparent VARCHAR(100)    
+)
+BEGIN
+	IF EXISTS(SELECT code FROM accesscontrol00 WHERE `active` = 1 AND `code` = accesscode) THEN
+		UPDATE accesscontrol00 
+			SET `code` = accesscode,
+			`name`= accessname,
+			`type` = accesstype,
+			`group` = accessgroup,
+			parentcode = accessparent
+		WHERE `code` = accesscode 
+		AND `name` = accessname
+		AND `type` = accesstype
+		AND parentcode = accessparent;
+	ELSE
+		INSERT accesscontrol00(`code`, `name`, `type`, `group`, parentcode, `active`, datecreated)
+		VALUES(accesscode, accessname, accesstype, accessgroup, accessparent, 1, NOW());
+	END IF;
+END$$
+
+DELIMITER ;
+

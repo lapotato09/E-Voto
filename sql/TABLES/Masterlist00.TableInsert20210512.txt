@@ -1,0 +1,14 @@
+
+DELIMITER //
+BEGIN
+USE ev000;
+	DECLARE @currentyear VARCHAR(10);
+    SET @currentyear = SELECT year(now());
+    
+    SELECT year(now());
+END
+DELIMITER ;
+
+
+INSERT masterlist00 (person00id,datestarteffectivity,dateendeffectivity,active,datecreated,schoolidno)
+VALUES ('1',now(),'12/31/2099',1,now(),CONCAT(year(now()),'-','0001'));

@@ -1,0 +1,10 @@
+CREATE TABLE `ev000`.`rawvotes00` (
+  `rawvotes00id` INT NOT NULL AUTO_INCREMENT,
+  `idno` VARCHAR(45) NULL,
+  `lastname` VARCHAR(45) NULL,
+  `firstname` VARCHAR(45) NULL,
+  `middlename` VARCHAR(45) NULL,
+  `suffixname` VARCHAR(45) NULL,
+  `is_active` BIT NULL DEFAULT 1,
+  `datesubmitted` VARCHAR(45) NULL,
+  PRIMARY KEY (`rawvotes00id`));

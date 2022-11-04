@@ -1,0 +1,10 @@
+CREATE TABLE `process00` (
+  `process00id` int(11) NOT NULL AUTO_INCREMENT,
+  `processname` varchar(100) DEFAULT NULL,
+  `datestarteffectivity` varchar(45) DEFAULT NULL,
+  `dateendeffectivity` varchar(45) DEFAULT NULL,
+  `active` bit(1) DEFAULT NULL,
+  `posted` bit(1) DEFAULT NULL,
+  `order` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`process00id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;

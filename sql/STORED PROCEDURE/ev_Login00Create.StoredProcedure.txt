@@ -1,0 +1,21 @@
+
+USE `ev000`;
+DROP procedure IF EXISTS `ev000`.`ev_Login00Create`;
+;
+
+DELIMITER $$
+USE `ev000`$$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `ev_Login00Create`(
+	IN uname VARCHAR(50),
+    IN pass VARCHAR(50),
+    IN idno VARCHAR(50)
+)
+BEGIN
+	DECLARE account00id INT;
+	INSERT INTO account00(username, `password`, datecreated)
+    VALUES(uname, pass, NOW());
+    SET account00id = last_insert_id();
+END$$
+
+DELIMITER ;
+;

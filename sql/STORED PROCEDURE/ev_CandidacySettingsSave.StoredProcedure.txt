@@ -1,0 +1,23 @@
+USE `ev000`;
+DROP procedure IF EXISTS `ev_CandidacySettingsSave`;
+
+DELIMITER $$
+USE `ev000`$$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `ev_CandidacySettingsSave`(
+    IN candidacy00id INT,
+    IN orgfieldcode VARCHAR(100),
+    IN orgfieldvalue VARCHAR(100),
+    IN orglevel VARCHAR(5)
+)
+BEGIN
+    DECLARE candidacy00id INT;    
+        IF EXISTS(SELECT fieldcode FROM candidacysettings00 WHERE fieldcode = orgfieldcode) THEN
+            UPDATE candidacysettings00 SET fieldvalue = orgfieldvalue, `level` = orglevel, datecreated = NOW() WHERE fieldcode = orgfieldcode;
+        ELSE
+            INSERT candidacysettings00(fieldcode, fieldname, fieldtype, fieldvalue, `level`, datecreated)
+            VALUES (orgfieldcode, orgfieldcode, 'VARCHAR', orgfieldvalue, orglevel, NOW());
+        END IF;
+END$$
+
+DELIMITER ;
+

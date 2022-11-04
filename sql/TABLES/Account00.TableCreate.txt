@@ -1,0 +1,9 @@
+CREATE TABLE `account00` (
+  `account00id` varchar(10) NOT NULL,
+  `username` varchar(45) NOT NULL,
+  `password` varchar(45) NOT NULL,
+  `otp` varchar(45) DEFAULT NULL,
+  `verified` int(11) DEFAULT NULL,
+  `datecreated` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`account00id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

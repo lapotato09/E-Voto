@@ -1,0 +1,11 @@
+CREATE TABLE `candidacysettings00` (
+  `candidacysettings00id` int(11) NOT NULL AUTO_INCREMENT,
+  `fieldcode` varchar(100) DEFAULT NULL,
+  `fieldname` varchar(100) DEFAULT NULL,
+  `fieldtype` varchar(100) DEFAULT NULL,
+  `fieldvalue` varchar(100) DEFAULT NULL,
+  `level` int(11) DEFAULT NULL,
+  `datecreated` varchar(45) DEFAULT NULL,
+  `rowversion` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  PRIMARY KEY (`candidacysettings00id`)
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;

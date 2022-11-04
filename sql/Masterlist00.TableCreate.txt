@@ -1,0 +1,8 @@
+CREATE TABLE `ev000`.`masterlist00` (
+  `masterlist00id` INT NOT NULL AUTO_INCREMENT,
+  `person00id` INT NOT NULL,
+  `datestarteffectivity` VARCHAR(45) NULL,
+  `dateendeffectivity` VARCHAR(45) NULL,
+  `active` BIT(1) NULL,
+  `datecreated` VARCHAR(45) NULL,
+  PRIMARY KEY (`masterlist00id`));

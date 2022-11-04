@@ -1,0 +1,8 @@
+CREATE TABLE `ev000`.`processed_votes01` (
+  `processed_votes01id` INT NOT NULL AUTO_INCREMENT,
+  `processed_votes00id` INT NULL,
+  `position` VARCHAR(45) NULL,
+  `code` VARCHAR(45) NULL,
+  `value` VARCHAR(45) NULL,
+  `datecreated` VARCHAR(45) NULL,
+  PRIMARY KEY (`processed_votes01id`));

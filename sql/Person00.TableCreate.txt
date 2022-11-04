@@ -1,0 +1,10 @@
+CREATE TABLE `ev000`.`person00` (
+  `person00id` INT NOT NULL AUTO_INCREMENT,
+  `lastname` VARCHAR(45) NULL,
+  `firstname` VARCHAR(45) NULL,
+  `middlename` VARCHAR(45) NULL,
+  `nameex` VARCHAR(45) NULL,
+  `active` BIT(1) NULL,
+  `dateencoded` VARCHAR(45) NULL,
+  `datecreated` VARCHAR(45) NULL,
+  PRIMARY KEY (`person00id`));

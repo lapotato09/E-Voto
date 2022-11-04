@@ -1,0 +1,85 @@
+.main {
+	background: white;
+	margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  padding-bottom: 20px;
+	min-height: 670px;
+}
+
+.main-tab {
+	padding: 0;
+	padding-top: 10px;
+	min-height: 600px;
+}
+.main-tab .nav-header li {
+	width: 15%;
+}
+.main-tab .nav-header a {
+	padding-top: 15px;
+	font-weight: bold;
+	color: black;
+	height: 60px;
+	text-align: center;
+}
+.main-tab .nav-header .tab1:hover, .main-tab .nav-header .tab1:focus {
+	background: #f1f2f6;
+	color: gray;
+	font-weight: bold;
+	/*font-size: 20px;*/
+}
+.main-tab .nav-header .tab2:hover, .main-tab .nav-header .tab2:focus {
+	background: #4484ce;
+	color: white;
+	font-weight: bold;
+}
+.main-tab .nav-header .tab3:hover, .main-tab .nav-header .tab3:focus {
+	background: #ffa502;
+	color: white;
+	font-weight: bold;
+}
+.main-tab .nav-header .tab4:hover, .main-tab .nav-header .tab4:focus{
+	background: green;
+	color: white;
+	font-weight: bold;
+}
+
+.tpl-ddown {
+	width: 100%; padding: 8px; border-radius: 5px;
+}
+/*.nav .animation {
+	position: absolute;
+	height: 100%;
+	top: 0;
+	z-index: 0;
+	background: blue;
+	width: 100%
+}
+.nav a:nth-child(1) {
+	background: green;
+}
+.nav a:nth-child(2) {
+	background: green;
+}
+.nav a:nth-child(3) {
+	background: green;
+}
+.nav a:nth-child(4) {
+	background: green;
+}
+.main-tab .nav-header .start a:nth-child(1):hover~.animation{
+	width: 100%;
+	left: 0;
+}
+.main-tab .nav-header .start a:nth-child(2):hover~.animation{
+	width: 100%;
+	left: 0;
+}
+.main-tab .nav-header .start a:nth-child(3):hover~.animation{
+	width: 100%;
+	left: 0;
+}
+.main-tab .nav-header .start a:nth-child(4):hover~.animation{
+	width: 100%;
+	left: 0;
+}*/

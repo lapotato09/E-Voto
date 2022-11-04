@@ -1,0 +1,10 @@
+CREATE TABLE `course01` (
+  `course01id` int(11) NOT NULL AUTO_INCREMENT,
+  `course00id` int(11) DEFAULT NULL,
+  `fieldcode` varchar(100) DEFAULT NULL,
+  `fieldname` varchar(100) DEFAULT NULL,
+  `fieldtype` varchar(100) DEFAULT NULL,
+  `fieldvalue` varchar(100) DEFAULT NULL,
+  `datecreated` datetime DEFAULT NULL,
+  PRIMARY KEY (`course01id`)
+) ENGINE=InnoDB AUTO_INCREMENT=67 DEFAULT CHARSET=utf8;

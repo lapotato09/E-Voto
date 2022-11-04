@@ -1,0 +1,9 @@
+CREATE TABLE `ev000`.`process00` (
+  `process00id` INT NOT NULL AUTO_INCREMENT,
+  `processname` VARCHAR(100) NULL,
+  `datestarteffectivity` VARCHAR(45) NULL,
+  `dateendeffectivity` VARCHAR(45) NULL,
+  `active` BIT NULL,
+  `posted` BIT NULL,
+  `order` VARCHAR(45) NULL,
+  PRIMARY KEY (`process00id`));

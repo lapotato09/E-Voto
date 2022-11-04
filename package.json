@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "requirejs": "^2.3.6",
+    "ui-select": "^0.19.8"
+  },
+  "devDependencies": {
+    "bs4-selectbox": "^1.0.16"
+  }
+}

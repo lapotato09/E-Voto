@@ -1,0 +1,10 @@
+CREATE TABLE `organization02` (
+  `organization02id` int(11) NOT NULL AUTO_INCREMENT,
+  `organization00id` int(11) DEFAULT NULL,
+  `fieldcode` varchar(45) DEFAULT NULL,
+  `fieldtype` varchar(45) DEFAULT NULL,
+  `fieldvalue` varchar(45) DEFAULT NULL,
+  `datecreated` varchar(45) DEFAULT NULL,
+  `rowversion` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`organization02id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

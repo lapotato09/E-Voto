@@ -1,0 +1,8 @@
+CREATE TABLE `ev000`.`person02` (
+  `person02id` INT NOT NULL AUTO_INCREMENT,
+  `person00id` INT NULL,
+  `fieldcode` VARCHAR(45) NULL,
+  `fieldtype` VARCHAR(45) NULL,
+  `fieldvalue` VARCHAR(45) NULL,
+  `datecreated` VARCHAR(45) NULL,
+  PRIMARY KEY (`person01id`));

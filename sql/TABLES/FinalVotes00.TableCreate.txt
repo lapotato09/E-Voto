@@ -1,0 +1,12 @@
+CREATE TABLE `ev000`.`final_votes00` (
+  `final_votes00` INT NOT NULL AUTO_INCREMENT,
+  `code` VARCHAR(45) NULL,
+  `idno` VARCHAR(45) NULL,
+  `lastname` VARCHAR(45) NULL,
+  `middlename` VARCHAR(45) NULL,
+  `suffixname` VARCHAR(45) NULL,
+  `position` VARCHAR(45) NULL,
+  `count` VARCHAR(45) NULL,
+  `asofdate` VARCHAR(45) NULL,
+  `datecreated` VARCHAR(45) NULL,
+  PRIMARY KEY (`final_votes00`));

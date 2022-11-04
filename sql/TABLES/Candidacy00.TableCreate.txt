@@ -1,0 +1,11 @@
+CREATE TABLE `candidacy00` (
+  `candidacy00id` int(11) NOT NULL AUTO_INCREMENT,
+  `status` varchar(45) DEFAULT NULL,
+  `actiondate` varchar(45) DEFAULT NULL,
+  `approverid` varchar(45) DEFAULT NULL,
+  `datecreated` varchar(45) DEFAULT NULL,
+  `filedby` varchar(45) DEFAULT NULL,
+  `lrn` varchar(45) DEFAULT NULL,
+  `is_active` int(1) NOT NULL,
+  PRIMARY KEY (`candidacy00id`)
+) ENGINE=InnoDB AUTO_INCREMENT=46 DEFAULT CHARSET=utf8;

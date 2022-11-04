@@ -1,0 +1,9 @@
+CREATE TABLE `ev000`.`accesscontrol00` (
+  `accesscontrol00id` INT NOT NULL AUTO_INCREMENT,
+  `code` VARCHAR(45) NULL,
+  `name` VARCHAR(45) NULL,
+  `type` VARCHAR(45) NULL,
+  `group` VARCHAR(45) NULL,
+  `active` VARCHAR(45) NULL,
+  `datecreated` VARCHAR(45) NULL,
+  PRIMARY KEY (`accesscontrol00id`));

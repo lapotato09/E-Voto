@@ -1,0 +1,15 @@
+""""CONFIG NAMING FORMAT""""
+
+TABLE CREATION
+Format:
+TableName.TableAction.txt
+
+Example:
+Person00.TableCreate.txt
+
+TABLE UPDATE
+Format:
+TableName.TableActionDate(Format: YYYYmmdd).txt
+
+Example:
+Person00.TableAlter20210512.txt

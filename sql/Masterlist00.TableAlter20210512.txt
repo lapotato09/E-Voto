@@ -1,0 +1,4 @@
+USE `TABLE`
+
+ALTER TABLE `ev000`.`masterlist00`
+ADD `schoolidno` VARCHAR(45) NULL ;

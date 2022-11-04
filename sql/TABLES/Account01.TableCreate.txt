@@ -1,0 +1,14 @@
+CREATE TABLE `account01` (
+  `account01id` varchar(10) NOT NULL,
+  `account00id` varchar(10) DEFAULT NULL,
+  `firstname` varchar(45) DEFAULT NULL,
+  `lastname` varchar(45) DEFAULT NULL,
+  `middlename` varchar(45) DEFAULT NULL,
+  `gender` varchar(45) DEFAULT NULL,
+  `email` varchar(45) DEFAULT NULL,
+  `mobile` varchar(15) DEFAULT NULL,
+  `active` int(11) DEFAULT NULL,
+  `datecreated` varchar(45) DEFAULT NULL,
+  `account00_account00id` varchar(10) NOT NULL,
+  PRIMARY KEY (`account01id`,`account00_account00id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

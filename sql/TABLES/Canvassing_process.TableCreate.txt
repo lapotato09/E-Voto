@@ -1,0 +1,10 @@
+CREATE TABLE `ev000`.`canvassing_process` (
+  `canvassing_process_id` INT NOT NULL AUTO_INCREMENT,
+  `fieldcode` VARCHAR(45) NULL,
+  `fieldvalue` VARCHAR(45) NULL,
+  `trigger_count` INT NULL,
+  `limit` INT NULL,
+  `sortoder` VARCHAR(45) NULL,
+  `datecreated` VARCHAR(45) NULL,
+  `active` BIT NULL,
+  PRIMARY KEY (`canvassing_process_id`));

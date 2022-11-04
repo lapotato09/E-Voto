@@ -1,0 +1,11 @@
+CREATE TABLE `position00` (
+  `position00id` int(11) NOT NULL AUTO_INCREMENT,
+  `orgid` varchar(10) DEFAULT NULL,
+  `positionname` varchar(45) DEFAULT NULL,
+  `positiondesc` varchar(45) DEFAULT NULL,
+  `level` varchar(10) DEFAULT NULL,
+  `active` bit(1) DEFAULT NULL,
+  `createdby` varchar(45) DEFAULT NULL,
+  `datecreated` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`position00id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

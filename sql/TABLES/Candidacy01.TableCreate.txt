@@ -1,0 +1,9 @@
+CREATE TABLE `candidacy01` (
+  `candidacy01id` int(11) NOT NULL AUTO_INCREMENT,
+  `candidacy00id` int(11) DEFAULT NULL,
+  `fieldcode` varchar(100) DEFAULT NULL,
+  `fieldname` varchar(100) DEFAULT NULL,
+  `fieldvalue` varchar(100) DEFAULT NULL,
+  `datecreated` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`candidacy01id`)
+) ENGINE=InnoDB AUTO_INCREMENT=588 DEFAULT CHARSET=utf8;

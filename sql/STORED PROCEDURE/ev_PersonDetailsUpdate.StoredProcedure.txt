@@ -1,0 +1,177 @@
+USE `ev000`;
+DROP procedure IF EXISTS `ev_PersonDetailsUpdate`;
+
+DELIMITER $$
+USE `ev000`$$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `ev_PersonDetailsUpdate`(
+	IN personid INT,
+	IN l_name VARCHAR(50),
+	IN f_name VARCHAR(50),
+	IN m_name VARCHAR(50),
+	IN stNameex VARCHAR(50),
+	IN age INT,
+	IN stAddress VARCHAR(50),
+	IN stBirthdate VARCHAR(50),
+	IN stCivilStatus VARCHAR(50),
+	IN stContact VARCHAR(50),
+	IN stCourse VARCHAR(50),
+	IN stDateEnrolled VARCHAR(50),
+	IN stEmail VARCHAR(50),
+	IN stEntrytype VARCHAR(50),
+	IN stGender VARCHAR(50),
+	IN stHeight VARCHAR(50),
+	IN stMajor VARCHAR(50),
+	IN stReligion VARCHAR(50),
+	IN stSchoolidno VARCHAR(50),
+	IN stStatus VARCHAR(50),
+	IN stWeight VARCHAR(50),
+	IN stYear VARCHAR(50)
+)
+BEGIN    
+	DECLARE fvalue VARCHAR(50);
+
+  IF EXISTS(SELECT lastname FROM person00 WHERE person00id = personid) THEN
+		SET fvalue = (SELECT lastname FROM person00 WHERE person00id = personid);
+		IF fvalue <> l_name THEN
+			UPDATE person00 SET lastname = l_name WHERE person00id = personid;
+		END IF;
+	END IF;
+
+	IF EXISTS(SELECT firstname FROM person00 WHERE person00id = personid) THEN
+		SET fvalue = (SELECT firstname FROM person00 WHERE person00id = personid);
+		IF fvalue <> f_name THEN
+			UPDATE person00 SET firstname = f_name WHERE person00id = personid;
+		END IF;
+	END IF;
+
+	IF EXISTS(SELECT middlename FROM person00 WHERE person00id = personid) THEN
+		SET fvalue = (SELECT middlename FROM person00 WHERE person00id = personid);
+		IF fvalue <> m_name THEN
+			UPDATE person00 SET middlename = m_name WHERE person00id = personid;
+		END IF;
+	END IF;
+
+	IF EXISTS(SELECT nameex FROM person00 WHERE person00id = personid) THEN
+		SET fvalue = (SELECT nameex FROM person00 WHERE person00id = personid);
+		IF fvalue <> stNameex THEN
+			UPDATE person00 SET nameex = stNameex WHERE person00id = personid;
+		END IF;
+	END IF;
+
+	IF EXISTS(SELECT fieldvalue FROM person01 WHERE person00id = personid AND fieldcode = 'ADDRESS') THEN
+		SET fvalue = (SELECT fieldvalue FROM person01 WHERE person00id = personid AND fieldcode = 'ADDRESS');
+		IF fvalue <> stAddress THEN
+			UPDATE person01 SET fieldvalue = stAddress, datecreated = now() WHERE person00id = personid AND fieldcode = 'ADDRESS'; 
+		END IF;
+	END IF;		
+
+	IF EXISTS(SELECT fieldvalue FROM person01 WHERE person00id = personid AND fieldcode = 'AGE') THEN
+		SET fvalue = (SELECT fieldvalue FROM person01 WHERE person00id = personid AND fieldcode = 'AGE');
+		IF fvalue <> age THEN
+			UPDATE person01 SET fieldvalue = age, datecreated = now() WHERE person00id = personid AND fieldcode = 'AGE'; 
+		END IF;
+	END IF;		
+
+	IF EXISTS(SELECT fieldvalue FROM person01 WHERE person00id = personid AND fieldcode = 'CIVILSTATUS') THEN
+		SET fvalue = (SELECT fieldvalue FROM person01 WHERE person00id = personid AND fieldcode = 'CIVILSTATUS');
+		IF fvalue <> stCivilStatus THEN
+			UPDATE person01 SET fieldvalue = stCivilStatus, datecreated = now() WHERE person00id = personid AND fieldcode = 'CIVILSTATUS'; 
+		END IF;
+	END IF;		
+
+	IF EXISTS(SELECT fieldvalue FROM person01 WHERE person00id = personid AND fieldcode = 'CONTACT') THEN
+		SET fvalue = (SELECT fieldvalue FROM person01 WHERE person00id = personid AND fieldcode = 'CONTACT');
+		IF fvalue <> stContact THEN
+			UPDATE person01 SET fieldvalue = stContact, datecreated = now() WHERE person00id = personid AND fieldcode = 'CONTACT'; 
+		END IF;
+	END IF;
+
+	IF EXISTS(SELECT fieldvalue FROM person01 WHERE person00id = personid AND fieldcode = 'EMAIL') THEN
+		SET fvalue = (SELECT fieldvalue FROM person01 WHERE person00id = personid AND fieldcode = 'EMAIL');
+		IF fvalue <> stEmail THEN
+			UPDATE person01 SET fieldvalue = stEmail, datecreated = now() WHERE person00id = personid AND fieldcode = 'EMAIL'; 
+		END IF;
+	END IF;	
+
+	IF EXISTS(SELECT fieldvalue FROM person01 WHERE person00id = personid AND fieldcode = 'GENDER') THEN
+		SET fvalue = (SELECT fieldvalue FROM person01 WHERE person00id = personid AND fieldcode = 'GENDER');
+		IF fvalue <> stGender THEN
+			UPDATE person01 SET fieldvalue = stGender, datecreated = now() WHERE person00id = personid AND fieldcode = 'GENDER'; 
+		END IF;
+	END IF;			
+
+	IF EXISTS(SELECT fieldvalue FROM person01 WHERE person00id = personid AND fieldcode = 'HEIGHT') THEN
+		SET fvalue = (SELECT fieldvalue FROM person01 WHERE person00id = personid AND fieldcode = 'HEIGHT');
+		IF fvalue <> stHeight THEN
+			UPDATE person01 SET fieldvalue = stHeight, datecreated = now() WHERE person00id = personid AND fieldcode = 'HEIGHT'; 
+		END IF;
+	END IF;	
+
+	IF EXISTS(SELECT fieldvalue FROM person01 WHERE person00id = personid AND fieldcode = 'WEIGHT') THEN
+		SET fvalue = (SELECT fieldvalue FROM person01 WHERE person00id = personid AND fieldcode = 'WEIGHT');
+		IF fvalue <> stWeight THEN
+			UPDATE person01 SET fieldvalue = stWeight, datecreated = now() WHERE person00id = personid AND fieldcode = 'WEIGHT'; 
+		END IF;
+	END IF;			
+
+	IF EXISTS(SELECT fieldvalue FROM person01 WHERE person00id = personid AND fieldcode = 'RELIGION') THEN
+		SET fvalue = (SELECT fieldvalue FROM person01 WHERE person00id = personid AND fieldcode = 'RELIGION');
+		IF fvalue <> stReligion THEN
+			UPDATE person01 SET fieldvalue = stReligion, datecreated = now() WHERE person00id = personid AND fieldcode = 'RELIGION'; 
+		END IF;
+	END IF;			
+    
+	IF EXISTS(SELECT fieldvalue FROM person01 WHERE person00id = personid AND fieldcode = 'BIRTHDATE') THEN
+		SET fvalue = (SELECT fieldvalue FROM person01 WHERE person00id = personid AND fieldcode = 'BIRTHDATE');
+		IF fvalue <> stBirthdate THEN
+			UPDATE person01 SET fieldvalue = stBirthdate, datecreated = now() WHERE person00id = personid AND fieldcode = 'BIRTHDATE'; 
+		END IF;
+	END IF;	
+    
+    IF EXISTS(SELECT fieldvalue FROM person02 WHERE person00id = personid AND fieldcode = 'COURSE') THEN
+		SET fvalue = (SELECT fieldvalue FROM person02 WHERE person00id = personid AND fieldcode = 'COURSE');
+		IF fvalue <> stCourse THEN
+			UPDATE person02 SET fieldvalue = stCourse, datecreated = now() WHERE person00id = personid AND fieldcode = 'COURSE'; 
+		END IF;
+	END IF;		
+
+	IF EXISTS(SELECT fieldvalue FROM person02 WHERE person00id = personid AND fieldcode = 'DATEENROLLED') THEN
+		SET fvalue = (SELECT fieldvalue FROM person02 WHERE person00id = personid AND fieldcode = 'DATEENROLLED');
+		IF fvalue <> stDateEnrolled THEN
+			UPDATE person02 SET fieldvalue = stDateEnrolled, datecreated = now() WHERE person00id = personid AND fieldcode = 'DATEENROLLED'; 
+		END IF;
+	END IF;		
+
+	IF EXISTS(SELECT fieldvalue FROM person02 WHERE person00id = personid AND fieldcode = 'ENTRYTYPE') THEN
+		SET fvalue = (SELECT fieldvalue FROM person02 WHERE person00id = personid AND fieldcode = 'ENTRYTYPE');
+		IF fvalue <> stEntrytype THEN
+			UPDATE person02 SET fieldvalue = stEntrytype, datecreated = now() WHERE person00id = personid AND fieldcode = 'ENTRYTYPE'; 
+		END IF;
+	END IF;		
+
+	IF EXISTS(SELECT fieldvalue FROM person02 WHERE person00id = personid AND fieldcode = 'MAJOR') THEN
+		SET fvalue = (SELECT fieldvalue FROM person02 WHERE person00id = personid AND fieldcode = 'MAJOR');
+		IF fvalue <> stMajor THEN
+			UPDATE person02 SET fieldvalue = stMajor, datecreated = now() WHERE person00id = personid AND fieldcode = 'MAJOR'; 
+		END IF;
+	END IF;	
+
+	IF EXISTS(SELECT fieldvalue FROM person02 WHERE person00id = personid AND fieldcode = 'STATUS') THEN
+		SET fvalue = (SELECT fieldvalue FROM person02 WHERE person00id = personid AND fieldcode = 'STATUS');
+		IF fvalue <> stStatus THEN
+			UPDATE person02 SET fieldvalue = stStatus, datecreated = now() WHERE person00id = personid AND fieldcode = 'STATUS'; 
+		END IF;
+	END IF;		
+
+	IF EXISTS(SELECT fieldvalue FROM person02 WHERE person00id = personid AND fieldcode = 'YEAR') THEN
+		SET fvalue = (SELECT fieldvalue FROM person02 WHERE person00id = personid AND fieldcode = 'YEAR');
+		IF fvalue <> stYear THEN
+			UPDATE person02 SET fieldvalue = stYear, datecreated = now() WHERE person00id = personid AND fieldcode = 'YEAR'; 
+		END IF;
+	END IF;	
+	
+    
+END$$
+
+DELIMITER ;
+

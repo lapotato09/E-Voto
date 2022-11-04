@@ -1,0 +1,30 @@
+USE `ev000`;
+DROP procedure IF EXISTS `ev_Login01Create`;
+
+USE `ev000`;
+DROP procedure IF EXISTS `ev000`.`ev_Login01Create`;
+;
+
+DELIMITER $$
+USE `ev000`$$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `ev_Login01Create`(
+    IN laccount00id INT,
+    IN lfname VARCHAR(50),
+    IN llname VARCHAR(50),
+    IN lmname VARCHAR(50),
+    IN lsuffname VARCHAR(50),
+    IN lsex VARCHAR(50),
+    IN lEmail VARCHAR(50),
+    IN lmobile VARCHAR(50),
+    IN lperson00id INT,
+    IN lidno VARCHAR(50),
+    IN lusertype VARCHAR(50)    
+)
+BEGIN
+  INSERT INTO account01(account00id, firstname, lastname, middlename, suffixname, gender, email, mobile, active, person00id, idno, usertype, datecreated)
+  VALUES(laccount00id, lfname, llname, lmname, lsuffname, lsex, lEmail, lmobile, 1, lperson00id, lidno, lusertype, NOW());
+END$$
+
+DELIMITER ;
+;
+

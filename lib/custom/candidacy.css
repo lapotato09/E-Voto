@@ -1,0 +1,54 @@
+
+.main-container {
+	background: white ;
+	margin-top: -12px;
+	/*margin-bottom: 0px;*/
+	padding-top: 15px;
+	padding-bottom: 30px;
+	/*height: 1800px;*/
+	min-height: 600px;
+	/*width: 1000px;*/	
+	font-family: 'Century Gothic';
+	/*font-family: "Oswald" , sans-serif;*/
+}
+
+.main-container .header-cont {
+	text-align: center;
+	margin: 0px;
+	padding: 0px;
+}
+
+.main-container .addbutton {
+	width: 80px;
+	height: 22px;
+	font-size: 12px;
+	padding: 0px;
+	margin: 0px;
+}
+
+.main-container .req {
+	color: red;
+}
+
+.main-container .error {	
+	color: red;
+	font-size: 12px;
+}
+
+.main-container .nav-header li {
+	width: 20%;
+}
+.main-container .nav-header a {	
+	padding-top: 15px;
+	font-weight: bold;
+	height: 60px;
+	text-align: center;
+}
+.main-container .nav-header .nav-item .mytab:hover, .main-container .nav-header .nav-item .mytab:focus {
+	background: #4484ce;
+	color: white;
+}
+/*.main-container .nav-header .mytab2:hover, .main-container .nav-header .mytab2:focus {
+	background: #4484ce;
+	color: white;
+}*/

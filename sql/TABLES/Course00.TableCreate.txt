@@ -1,0 +1,12 @@
+CREATE TABLE `course00` (
+  `course00id` int(11) NOT NULL AUTO_INCREMENT,
+  `degree` varchar(100) DEFAULT NULL,
+  `degreecode` varchar(100) DEFAULT NULL,
+  `course` varchar(100) DEFAULT NULL,
+  `coursecode` varchar(100) DEFAULT NULL,
+  `description` varchar(100) DEFAULT NULL,
+  `code` varchar(45) DEFAULT NULL,
+  `active` bit(1) DEFAULT b'1',
+  `datecreated` datetime DEFAULT NULL,
+  PRIMARY KEY (`course00id`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;

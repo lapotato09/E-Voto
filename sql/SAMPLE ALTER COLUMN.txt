@@ -1,0 +1,2 @@
+ALTER TABLE `ev000`.`person02` 
+CHANGE COLUMN `person01id` `person02id` INT(11) NOT NULL AUTO_INCREMENT ;
